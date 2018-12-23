@@ -6,7 +6,10 @@ import Waypoint from 'react-waypoint'
 import Layout from '../components/layout'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-import pic01 from '../assets/images/pic01.jpg'
+import pic01 from '../assets/images/sakura.jpg'
+import teamsIcon from '../assets/images/teams.jpg'
+import 'font-awesome/css/font-awesome.css';
+
 
 class Index extends React.Component {
   constructor(props) {
@@ -28,7 +31,7 @@ class Index extends React.Component {
 
     return (
       <Layout>
-        <Helmet title="Gatsby Starter - Stellar" />
+        <Helmet title="Andy Tan" />
 
         <Header />
 
@@ -45,14 +48,14 @@ class Index extends React.Component {
             <div className="spotlight">
               <div className="content">
                 <header className="major">
-                  <h2>Ipsum sed adipiscing</h2>
+                  <h2>About me</h2>
                 </header>
-                <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-                adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-                Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-                <ul className="actions">
+                <p>i think its hilarious u kids talking shit about andy. u wouldnt say this shit to him at lan, 
+                  hes jacked. not only that but he wears the freshest clothes, eats at the chillest restaurants 
+                  and hangs out with the hottest dudes. yall are pathetic lol</p>
+                {/* <ul className="actions">
                   <li><Link to="/generic" className="button">Learn More</Link></li>
-                </ul>
+                </ul> */}
               </div>
               <span className="image"><img src={pic01} alt="" /></span>
             </div>
@@ -60,21 +63,23 @@ class Index extends React.Component {
 
           <section id="first" className="main special">
             <header className="major">
-              <h2>Magna veroeros</h2>
+              <h2>Work experience</h2>
             </header>
+            
             <ul className="features">
               <li>
-                <span className="icon major style1 fa-code"></span>
+                <span className="icon major style1 fab fa-microsoft">
+                </span>
                 <h3>Ipsum consequat</h3>
                 <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
               </li>
               <li>
-                <span className="icon major style3 fa-copy"></span>
+                <span className="icon major style3 fab fa-github"></span>
                 <h3>Amed sed feugiat</h3>
                 <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
               </li>
               <li>
-                <span className="icon major style5 fa-diamond"></span>
+                <span className="icon major style5 fab fa-linkedin"></span>
                 <h3>Dolor nullam</h3>
                 <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
               </li>
@@ -88,7 +93,7 @@ class Index extends React.Component {
 
           <section id="second" className="main special">
             <header className="major">
-              <h2>Ipsum consequat</h2>
+              <h2>Projects</h2>
               <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
               posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
             </header>
@@ -124,14 +129,13 @@ class Index extends React.Component {
 
           <section id="cta" className="main special">
             <header className="major">
-              <h2>Congue imperdiet</h2>
-              <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-              posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+              <h2>Contact me</h2>
+              <p>If you have any inquiries, let me know!</p>
             </header>
             <footer className="major">
               <ul className="actions">
-                <li><Link to="/generic" className="button special">Get Started</Link></li>
-                <li><Link to="/generic" className="button">Learn More</Link></li>
+                <li><Link to="/generic" className="button special">Chatbot will go here</Link></li>
+                {/* <li><Link to="/generic" className="button">Learn More</Link></li> */}
               </ul>
             </footer>
           </section>
