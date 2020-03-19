@@ -45,6 +45,7 @@ class ChatBox extends React.Component {
     )
     if (!token) {
       console.error('Authentication failed')
+      throw new Error('Authentication failed');
     }
 
     // Create the request parameters to Dialogflow
