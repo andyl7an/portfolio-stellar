@@ -1,5 +1,5 @@
 // Initialize secrets
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -7,9 +7,9 @@ console.log(`Setting configurations from ${`.env.${process.env.NODE_ENV}`}`)
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Stellar by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Stellar by HTML5 UP"
+    title: 'Gatsby Starter - Stellar by HTML5 UP',
+    author: 'Hunter Chang',
+    description: 'A Gatsby.js Starter based on Stellar by HTML5 UP',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -31,7 +31,7 @@ module.exports = {
       // Define secrets from environment variables here
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        whitelist: ["DIALOGFLOW_PRIVATE_KEY", "DIALOGFLOW_PRIVATE_EMAIL"]
+        whitelist: ['DIALOGFLOW_PRIVATE_KEY', 'DIALOGFLOW_PRIVATE_EMAIL'],
       },
     },
   ],

@@ -1,8 +1,7 @@
 import React from 'react'
 import Typist from 'react-typist'
 import styles from './ChatBox.module.css'
-import googleAuth from '../googleAuth/googleAuth';
-
+import googleAuth from '../googleAuth/googleAuth'
 
 class ChatBox extends React.Component {
   constructor(props) {
@@ -26,24 +25,26 @@ class ChatBox extends React.Component {
   }
 
   async generateAccessToken(clientEmail, privateKey) {
-    let token;
+    let token
     try {
-        token = await googleAuth(clientEmail, privateKey, ['https://www.googleapis.com/auth/cloud-platform']);
+      token = await googleAuth(clientEmail, privateKey, [
+        'https://www.googleapis.com/auth/cloud-platform',
+      ])
     } catch (e) {
-        console.error("react-native-dialogflow: Authentication Error: " + e);
-        throw new Error("react-native-dialogflow: Authentication Error: " + e);
+      console.error('react-native-dialogflow: Authentication Error: ' + e)
+      throw new Error('react-native-dialogflow: Authentication Error: ' + e)
     } finally {
-        return token;
+      return token
     }
-}
+  }
 
   async getQueryResult(utterance) {
     const token = await this.generateAccessToken(
       process.env.DIALOGFLOW_PRIVATE_EMAIL,
       process.env.DIALOGFLOW_PRIVATE_KEY
-    );
+    )
     if (!token) {
-      console.error("Authentication failed");
+      console.error('Authentication failed')
     }
 
     // Create the request parameters to Dialogflow
@@ -57,8 +58,7 @@ class ChatBox extends React.Component {
     return fetch(url, {
       body: JSON.stringify(data),
       headers: {
-        Authorization:
-        `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json; charset=utf-8',
       },
       method: 'POST',
@@ -68,25 +68,22 @@ class ChatBox extends React.Component {
         console.error(`Error: ${error}`)
         this.setState({ text: `Error: ${error}` })
       })
-
   }
 
   async handleSubmit(event) {
     // Prevent page refresh on submit
     event.preventDefault()
 
-    
-    const request = this.getQueryResult(this.state.value);
+    const request = this.getQueryResult(this.state.value)
 
     // Clear the text box
-    this.setState({value: ""});
+    this.setState({ value: '' })
 
-    const response = await request;
+    const response = await request
     this.setState({
-      text: response.queryResult.fulfillmentText
+      text: response.queryResult.fulfillmentText,
     })
     this.loopTyping()
-
   }
 
   // Restart Typist animation

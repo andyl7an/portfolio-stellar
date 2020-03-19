@@ -36,8 +36,10 @@
     "node": "^12.14.1"
   },
   "scripts": {
-    "build": "gatsby build",
+    "create-env": "node ./scripts/create-env.js",
+    "build": "npm run create-env && gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
