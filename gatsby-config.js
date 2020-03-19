@@ -6,8 +6,8 @@ require('dotenv').config({
 console.log(`Setting configurations from ${`.env.${process.env.NODE_ENV}`}`)
 
 if (
-  process.env.DIALOGFLOW_PRIVATE_EMAIL === undefined ||
-  process.env.DIALOGFLOW_PRIVATE_KEY === undefined
+  process.env.DIALOGFLOW_PRIVATE_EMAIL === "undefined" ||
+  process.env.DIALOGFLOW_PRIVATE_KEY === "undefined"
 ) {
   throw new Error('DialogFlow keys not configured')
 }
