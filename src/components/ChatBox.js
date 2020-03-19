@@ -1,7 +1,7 @@
 import React from 'react'
 import Typist from 'react-typist'
 import styles from './ChatBox.module.css'
-import googleAuth from '../googleAuth/GoogleAuth';
+import googleAuth from './googleAuth/GoogleAuth';
 
 
 class ChatBox extends React.Component {
