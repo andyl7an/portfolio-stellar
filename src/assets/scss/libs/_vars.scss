@@ -29,16 +29,16 @@
 // Palette.
 	$palette: (
 		bg:					#935d8c,
-		fg:					rgba(255,255,255,0.65),
-		fg-bold:			#ffffff,
-		fg-light:			rgba(255,255,255,0.5),
-		border:				rgba(255,255,255,0.35),
+		fg:					rgba(0, 0, 0, 0.65),
+		fg-bold:			#000000,
+		fg-light:			rgba(0, 0, 0, 0.5),
+		border:				rgba(0, 0, 0, 0.35),
 		border-bg:			rgba(255,255,255,0.075),
 		border2:			rgba(255,255,255,0.75),
 		border2-bg:			rgba(255,255,255,0.2),
 
 		invert: (
-			bg:				#ffffff,
+			bg:				#000000,
 			bg-alt:			#f7f7f7,
 			fg:				#636363,
 			fg-bold:		#636363,
@@ -55,6 +55,6 @@
 		accent3:			#a89cc8,
 		accent4:			#9bb2e1,
 		accent5:			#8cc9f0,
-		bg1:				#13d7fd,
-		bg2:				#5532ff
+		bg1:				#ffffff,
+		bg2:				#ffffff
 	);

@@ -1,3 +1,10 @@
+// Initialize secrets
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(`Setting configurations from ${`.env.${process.env.NODE_ENV}`}`)
+
 module.exports = {
   siteMetadata: {
     title: "Gatsby Starter - Stellar by HTML5 UP",
@@ -19,6 +26,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      // Define secrets from environment variables here
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["DIALOGFLOW_PRIVATE_KEY", "DIALOGFLOW_PRIVATE_EMAIL"]
+      },
+    },
   ],
 }
