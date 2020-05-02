@@ -41,5 +41,14 @@ module.exports = {
         whitelist: ['DIALOGFLOW_PRIVATE_KEY', 'DIALOGFLOW_PRIVATE_EMAIL'],
       },
     },
+    // Read Thru
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: `markdown-pages`,
+      },
+    },
+    { resolve: `gatsby-transformer-remark` }
   ],
 }

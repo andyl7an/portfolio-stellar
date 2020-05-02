@@ -16,6 +16,8 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-source-filesystem": "^2.3.0",
+    "gatsby-transformer-remark": "^2.8.4",
     "i": "^0.3.6",
     "jsrsasign": "^8.0.12",
     "node-sass": "^4.13.1",
