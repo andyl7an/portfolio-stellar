@@ -2,7 +2,7 @@ module.exports = {
     // App Info
     appstore_link         : "https://imedadel.me",                                  // Enter App Store URL.
     // playstore_link        : "https://imedadel.me",                                  // Enter Google Play Store URL.
-    google_analytics_ID   : "UA-47311644-5",                                        // Enter Google Analytics ID or ""
+    google_analytics_ID   : "UA-48173133-1",                                        // Enter Google Analytics ID or ""
     // presskit_download_link: "https://imedadel.me",                                  // Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
     video_or_screenshot   : "screenshot",                                           // "screenshot" or "video"
     app_url               : "https://agalp.imedadel.me",                            // Domain of your website without path_prefix.
