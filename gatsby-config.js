@@ -16,7 +16,7 @@ const configs = require('./readthru-config')
 
 module.exports = {
   siteMetadata: {
-    title: 'Andy Tan - Portfolio',
+    title: 'Read Thru - Portfolio',
     author: 'Andy Tan',
     description: 'Portfolio site',
   },
