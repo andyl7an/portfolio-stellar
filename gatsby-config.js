@@ -12,11 +12,13 @@ if (
   throw new Error('DialogFlow keys not configured')
 }
 
+const configs = require('./readthru-config')
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Stellar by HTML5 UP',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js Starter based on Stellar by HTML5 UP',
+    title: 'Andy Tan - Portfolio',
+    author: 'Andy Tan',
+    description: 'Portfolio site',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -49,6 +51,35 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    { resolve: `gatsby-transformer-remark` }
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    { resolve: `gatsby-transformer-remark` },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: configs.app_name,
+        short_name: configs.app_name,
+        start_url: configs.path_prefix,
+        background_color: configs.body_background_color,
+        theme_color: configs.app_title_color,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: configs.google_analytics_ID,
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 }
