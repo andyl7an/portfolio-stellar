@@ -15,7 +15,7 @@ module.exports = {
     // Personal Info
     your_name              : "Andy Tan",
     your_link              : "https://andytan.me",
-    your_city              : "San Francisco",
+    your_city              : "Los Angeles",
     email_address          : "atan.readthru@gmail.com",
     // linkedin_username      : null,
     // facebook_username      : null,
