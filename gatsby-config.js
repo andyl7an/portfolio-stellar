@@ -19,6 +19,7 @@ module.exports = {
     title: 'Read Thru - Portfolio',
     author: 'Andy Tan',
     description: 'Portfolio site',
+    siteUrl: 'https://andytan.me'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
