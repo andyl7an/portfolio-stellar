@@ -1,11 +1,11 @@
 module.exports = {
     // App Info
-    appstore_link         : "http://readthru.app.link/pNdsVcbVh6",                                  // Enter App Store URL.
+    appstore_link         : "https://apps.apple.com/us/app/read-thru/id1510251748",                                  // Enter App Store URL.
     // playstore_link        : "https://imedadel.me",                                  // Enter Google Play Store URL.
     google_analytics_ID   : "UA-48173133-1",                                        // Enter Google Analytics ID or ""
     // presskit_download_link: "https://imedadel.me",                                  // Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
     video_or_screenshot   : "screenshot",                                           // "screenshot" or "video"
-    app_url               : "http://readthru.app.link/pNdsVcbVh6",                            // Domain of your website without path_prefix.
+    app_url               : "https://apps.apple.com/us/app/read-thru/id1510251748",                            // Domain of your website without path_prefix.
     path_prefix           : "/",                                                    // Prefixes all links. For cases when deployed to example.github.io/automatic-gatsbyjs-app-landing-page/.
     app_name              : "Read Thru",
     // app_price             : "Free",
